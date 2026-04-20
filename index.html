@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana Ubíqua - Direito UNINASSAU</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #1a2a44;
+            --gold: #c5a059;
+            --light-gray: #f8f9fa;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--light-gray);
+            color: var(--primary-blue);
+        }
+        .serif-title {
+            font-family: 'Playfair Display', serif;
+        }
+        .gold-border {
+            border-left: 4px solid var(--gold);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #1a2a44 0%, #2c3e50 100%);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            background: #000;
+        }
+        .video-container iframe, .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header / Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-8 h-8 bg-[#1a2a44] rounded flex items-center justify-center">
+                    <span class="text-white font-bold">U</span>
+                </div>
+                <span class="font-bold text-lg tracking-tight uppercase">Semana Ubíqua <span class="text-[#c5a059]">UNINASSAU</span></span>
+            </div>
+            <nav class="hidden md:flex space-x-6 text-sm font-semibold">
+                <a href="#apresentacao" class="hover:text-[#c5a059] transition">Apresentação</a>
+                <a href="#conceito" class="hover:text-[#c5a059] transition">União Estável</a>
+                <a href="#oratoria" class="hover:text-[#c5a059] transition">Oratória Jurídica</a>
+                <a href="#programacao" class="hover:text-[#c5a059] transition">Programação</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-20 px-4 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="serif-title text-4xl md:text-6xl mb-6">União Estável e Precisão Vocabular</h1>
+            <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto font-light">
+                Um projeto desenvolvido para a Semana Ubíqua, integrando tecnologia, oratória e direito civil.
+            </p>
+            <div class="flex justify-center gap-4">
+                <a href="#apresentacao" class="bg-[#c5a059] hover:bg-[#b38f4d] text-white px-8 py-3 rounded-full font-bold transition">Ver Vídeo</a>
+                <a href="#programacao" class="border border-white hover:bg-white hover:text-[#1a2a44] px-8 py-3 rounded-full font-bold transition">Cronograma</a>
+            </div>
+        </div>
+    </section>
+
+    <main class="max-w-6xl mx-auto px-4 py-16 space-y-24">
+
+        <!-- Video Presentation Section -->
+        <section id="apresentacao" class="scroll-mt-24">
+            <div class="text-center mb-12">
+                <h2 class="serif-title text-3xl mb-4">Apresentação em Vídeo</h2>
+                <div class="w-20 h-1 bg-[#c5a059] mx-auto"></div>
+                <p class="mt-4 text-gray-600">Assista à nossa explicação sobre os direitos na união estável e a importância da dicção.</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto shadow-2xl rounded-2xl p-4 bg-white">
+                <div class="video-container">
+                    <!-- Substituir o SRC pelo link do vídeo após o upload -->
+                    <div class="absolute inset-0 flex items-center justify-center text-gray-400 text-center p-8">
+                        <div>
+                            <svg class="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            <p class="text-xl font-semibold">Espaço para o Vídeo do Grupo</p>
+                            <p class="text-sm mt-2">Faça o upload do seu Reels/TikTok aqui</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Concept Section -->
+        <section id="conceito" class="grid md:grid-cols-2 gap-12 items-center scroll-mt-24">
+            <div class="space-y-6">
+                <h2 class="serif-title text-3xl text-[#1a2a44]">O Conceito Jurídico</h2>
+                <div class="gold-border pl-6 space-y-4">
+                    <p class="text-gray-700 leading-relaxed">
+                        A União Estável é uma <strong>situação de fato</strong> reconhecida pelo Direito como entidade familiar, caracterizada pela convivência pública, contínua e duradoura com o objetivo de constituir família.
+                    </p>
+                    <div class="bg-blue-50 p-6 rounded-xl border-l-4 border-blue-800">
+                        <h4 class="font-bold text-blue-900 mb-2">Regime de Bens</h4>
+                        <p class="text-sm text-blue-800">
+                            No silêncio das partes, aplica-se a <strong>Comunhão Parcial de Bens</strong>. Tudo o que for adquirido onerosamente durante a união pertence a ambos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-white p-6 rounded-2xl shadow-md card-hover text-center">
+                    <span class="text-3xl block mb-2">👥</span>
+                    <h3 class="font-bold text-sm uppercase text-gray-500">Pública</h3>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-md card-hover text-center">
+                    <span class="text-3xl block mb-2">⏳</span>
+                    <h3 class="font-bold text-sm uppercase text-gray-500">Contínua</h3>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-md card-hover text-center">
+                    <span class="text-3xl block mb-2">🏠</span>
+                    <h3 class="font-bold text-sm uppercase text-gray-500">Duradoura</h3>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-md card-hover text-center">
+                    <span class="text-3xl block mb-2">💍</span>
+                    <h3 class="font-bold text-sm uppercase text-gray-500">Objetivo Família</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Paronyms Section -->
+        <section id="oratoria" class="bg-[#1a2a44] text-white rounded-3xl p-8 md:p-16 scroll-mt-24">
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <h2 class="serif-title text-3xl mb-4 text-[#c5a059]">Desafio da Oratória</h2>
+                <p class="text-blue-100">A precisão vocabular é a ferramenta mais poderosa de um operador do Direito. Não confunda parônimos!</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white/10 p-8 rounded-2xl border border-white/20 hover:border-[#c5a059] transition">
+                    <h3 class="text-2xl font-bold mb-4 flex items-center">
+                        <span class="bg-[#c5a059] text-white w-8 h-8 rounded-full inline-flex items-center justify-center mr-3 text-sm">A</span>
+                        Ratificar
+                    </h3>
+                    <p class="text-blue-50 mb-4 italic">"Confirmar, validar, reafirmar o que foi dito ou feito."</p>
+                    <div class="bg-[#c5a059]/20 p-4 rounded text-sm border-l-2 border-[#c5a059]">
+                        <strong>Exemplo:</strong> Ratificar os termos da união em escritura pública.
+                    </div>
+                </div>
+                <div class="bg-white/10 p-8 rounded-2xl border border-white/20 hover:border-[#c5a059] transition">
+                    <h3 class="text-2xl font-bold mb-4 flex items-center">
+                        <span class="bg-red-500 text-white w-8 h-8 rounded-full inline-flex items-center justify-center mr-3 text-sm">E</span>
+                        Retificar
+                    </h3>
+                    <p class="text-blue-50 mb-4 italic">"Corrigir, emendar, alinhar o que está errado."</p>
+                    <div class="bg-red-500/20 p-4 rounded text-sm border-l-2 border-red-500">
+                        <strong>Exemplo:</strong> Retificar a data de início da união por erro material.
+                    </div>
+                </div>
+            </div>
+            <p class="text-center mt-12 text-[#c5a059] font-semibold italic">"Você ratifica o que está certo e retifica o que está errado."</p>
+        </section>
+
+        <!-- Program Section -->
+        <section id="programacao" class="scroll-mt-24">
+            <div class="text-center mb-12">
+                <h2 class="serif-title text-3xl mb-4">Programação Ubíqua</h2>
+                <div class="w-20 h-1 bg-[#c5a059] mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="p-6 bg-white rounded-xl shadow-sm border border-gray-100 card-hover">
+                    <span class="text-[#c5a059] font-bold text-xs uppercase tracking-widest block mb-2">15 min</span>
+                    <h4 class="font-bold mb-2">Workshop Media Training</h4>
+                    <p class="text-xs text-gray-500">Postura, dicção e enquadramento jurídico digital.</p>
+                </div>
+                <div class="p-6 bg-white rounded-xl shadow-sm border border-gray-100 card-hover">
+                    <span class="text-[#c5a059] font-bold text-xs uppercase tracking-widest block mb-2">35 min</span>
+                    <h4 class="font-bold mb-2">Estúdio Express</h4>
+                    <p class="text-xs text-gray-500">Gravação do Reels jurídico com foco em parônimos.</p>
+                </div>
+                <div class="p-6 bg-white rounded-xl shadow-sm border border-gray-100 card-hover">
+                    <span class="text-[#c5a059] font-bold text-xs uppercase tracking-widest block mb-2">30 min</span>
+                    <h4 class="font-bold mb-2">Parede Digital</h4>
+                    <p class="text-xs text-gray-500">Criação de cartazes físicos e geração de QR Codes.</p>
+                </div>
+                <div class="p-6 bg-white rounded-xl shadow-sm border border-gray-100 card-hover">
+                    <span class="text-[#c5a059] font-bold text-xs uppercase tracking-widest block mb-2">30 min</span>
+                    <h4 class="font-bold mb-2">Vernissage e Debate</h4>
+                    <p class="text-xs text-gray-500">Tour digital pelos vídeos e feedback da turma.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-4 mt-24">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+            <div>
+                <p class="text-[#c5a059] font-bold mb-2 uppercase tracking-tighter">Direito UNINASSAU</p>
+                <h3 class="serif-title text-2xl mb-4">Semana Ubíqua 2024</h3>
+                <p class="text-gray-400 text-sm max-w-sm">
+                    A justiça é feita de fatos, mas se sustenta na precisão das palavras.
+                </p>
+            </div>
+            <div class="flex flex-col md:items-end gap-4">
+                <div class="text-sm text-gray-400">Desenvolvido pelo Grupo de Direito Civil</div>
+                <div class="p-2 bg-white rounded-lg inline-block">
+                    <!-- Placeholder para o QR Code que levará a este site -->
+                    <div class="w-24 h-24 bg-gray-200 flex items-center justify-center text-gray-800 text-[10px] text-center p-2 font-bold uppercase">
+                        QR Code<br>Deste Projeto
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto border-t border-gray-800 mt-12 pt-8 text-center text-gray-500 text-xs">
+            &copy; 2024 UNINASSAU - Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Interactive effect for paronyms
+        const cards = document.querySelectorAll('#oratoria > div > div');
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.borderColor = '#c5a059';
+            });
+        });
+    </script>
+</body>
+</html>
