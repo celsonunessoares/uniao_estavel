@@ -98,7 +98,6 @@
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
 
-        /* Botão Flutuante */
         #backToTop {
             opacity: 0;
             visibility: hidden;
@@ -118,7 +117,6 @@
     <header class="glass shadow-sm sticky top-0 z-50 border-b border-gray-200/50">
         <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center space-x-4">
-                <!-- Logo da Faculdade -->
                 <img src="img/uninassau.png" alt="Logo UNINASSAU" class="h-10 w-auto object-contain"
                     onerror="this.style.display='none'">
 
@@ -138,7 +136,6 @@
 
     <!-- Hero Section -->
     <section class="hero-gradient text-white py-20 px-4 text-center">
-        <!-- Decorativo -->
         <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
             <svg width="100%" height="100%">
                 <defs>
@@ -210,12 +207,11 @@
                         </div>
                     </div>
 
-                    <!-- Equipe do Projeto -->
+                    <!-- Equipe -->
                     <div class="pt-8 border-t border-gray-200 space-y-6">
-                        <!-- Integrantes -->
                         <div>
-                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-3">Integrantes do
-                                Grupo:</p>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-3">Integrantes:
+                            </p>
                             <div class="flex flex-wrap gap-2">
                                 <span
                                     class="px-3 py-1 bg-gray-100 text-gray-600 rounded-md text-xs font-medium border border-gray-200">Antônia
@@ -250,7 +246,6 @@
                             </div>
                         </div>
 
-                        <!-- Orientadores -->
                         <div>
                             <p class="text-[10px] font-bold text-[#c5a059] uppercase tracking-widest mb-3">Orientadores:
                             </p>
@@ -273,8 +268,11 @@
                 <div class="order-1 md:order-2 flex justify-center">
                     <div class="phone-frame">
                         <div class="phone-speaker"></div>
-                        <video controls poster="https://via.placeholder.com/400x711/1a2a44/c5a059?text=Play+Video">
+                        <!-- Adicionado preload e playsinline para melhor compatibilidade -->
+                        <video id="mainVideo" controls preload="auto" playsinline
+                            poster="https://via.placeholder.com/400x711/1a2a44/c5a059?text=Clique+para+Assistir">
                             <source src="img/brenda.mp4" type="video/mp4">
+                            Seu navegador não suporta vídeos HTML5.
                         </video>
                     </div>
                 </div>
@@ -433,6 +431,13 @@
     </a>
 
     <script>
+        // Verificação de carregamento do vídeo
+        const video = document.getElementById('mainVideo');
+        video.addEventListener('error', function (event) {
+            console.error('Erro ao carregar o vídeo. Verifique se o arquivo "brenda.mp4" está na pasta "img".',
+                event);
+        });
+
         // Mostrar/Esconder botão de voltar ao topo
         window.onscroll = function () {
             const btn = document.getElementById('backToTop');
