@@ -53,6 +53,22 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            display: block;
+        }
+
+        /* Aviso de erro sobreposto ao vídeo */
+        #videoErrorOverlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            z-index: 20;
         }
 
         .phone-speaker {
@@ -117,7 +133,7 @@
     <header class="glass shadow-sm sticky top-0 z-50 border-b border-gray-200/50">
         <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center space-x-4">
-                <img src="img/uninassau.png" alt="Logo UNINASSAU" class="h-10 w-auto object-contain"
+                <img src="./img/uninassau.png" alt="Logo UNINASSAU" class="h-10 w-auto object-contain"
                     onerror="this.style.display='none'">
 
                 <div class="flex flex-col border-l border-gray-200 pl-4">
@@ -268,10 +284,22 @@
                 <div class="order-1 md:order-2 flex justify-center">
                     <div class="phone-frame">
                         <div class="phone-speaker"></div>
-                        <!-- Adicionado preload e playsinline para melhor compatibilidade -->
-                        <video id="mainVideo" controls preload="auto" playsinline
-                            poster="https://via.placeholder.com/400x711/1a2a44/c5a059?text=Clique+para+Assistir">
-                            <source src="img/brenda.mp4" type="video/mp4">
+
+                        <!-- Overlay para mensagens de erro -->
+                        <div id="videoErrorOverlay">
+                            <svg class="w-12 h-12 text-red-500 mb-2" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <p class="text-xs font-bold uppercase tracking-widest">Vídeo não encontrado</p>
+                            <p class="text-[10px] opacity-60 mt-2">Certifique-se que "brenda.mp4" está dentro da pasta
+                                "img"</p>
+                        </div>
+
+                        <video id="mainVideo" controls preload="metadata" playsinline
+                            poster="https://via.placeholder.com/400x711/1a2a44/c5a059?text=Carregando+Vídeo...">
+                            <source src="./img/brenda.mp4" type="video/mp4">
                             Seu navegador não suporta vídeos HTML5.
                         </video>
                     </div>
@@ -403,7 +431,7 @@
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-10 md:space-y-0">
             <div class="text-center md:text-left space-y-4">
                 <div class="flex items-center justify-center md:justify-start space-x-3">
-                    <img src="img/uninassau.png" alt="Logo UNINASSAU" class="h-8 w-auto object-contain opacity-80"
+                    <img src="./img/uninassau.png" alt="Logo UNINASSAU" class="h-8 w-auto object-contain opacity-80"
                         onerror="this.style.display='none'">
                     <div class="h-8 w-[1px] bg-gray-200 mx-1"></div>
                     <span class="font-bold text-xs uppercase tracking-widest text-gray-500">Semana Ubíqua 2026</span>
@@ -431,11 +459,20 @@
     </a>
 
     <script>
-        // Verificação de carregamento do vídeo
         const video = document.getElementById('mainVideo');
-        video.addEventListener('error', function (event) {
-            console.error('Erro ao carregar o vídeo. Verifique se o arquivo "brenda.mp4" está na pasta "img".',
-                event);
+        const overlay = document.getElementById('videoErrorOverlay');
+
+        // Detalhes extras para depuração
+        video.addEventListener('error', function (e) {
+            console.error('Falha no vídeo:', video.error);
+            overlay.style.display = 'flex';
+        });
+
+        // Tentar recarregar se necessário
+        window.addEventListener('load', () => {
+            if (video.networkState === video.NETWORK_NO_SOURCE) {
+                overlay.style.display = 'flex';
+            }
         });
 
         // Mostrar/Esconder botão de voltar ao topo
