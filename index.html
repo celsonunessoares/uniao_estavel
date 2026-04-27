@@ -36,14 +36,16 @@
             overflow: hidden;
         }
 
-        /* Moldura de Celular para o Vídeo */
+        /* Moldura de Celular Ajustada para Legendas */
         .phone-frame {
             position: relative;
-            width: 280px;
-            height: 580px;
+            width: 320px;
+            /* Aumentado de 280px */
+            height: 650px;
+            /* Aumentado de 580px */
             margin: auto;
             border: 12px solid #222;
-            border-radius: 36px;
+            border-radius: 40px;
             overflow: hidden;
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
             background: #000;
@@ -52,11 +54,11 @@
         .phone-frame video {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
+            /* Alterado de cover para contain para não cortar legendas */
             display: block;
         }
 
-        /* Aviso de erro sobreposto ao vídeo */
         #videoErrorOverlay {
             position: absolute;
             inset: 0;
@@ -76,11 +78,11 @@
             top: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 60px;
-            height: 18px;
+            width: 65px;
+            height: 20px;
             background: #222;
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
             z-index: 10;
         }
 
@@ -133,11 +135,13 @@
     <header class="glass shadow-sm sticky top-0 z-50 border-b border-gray-200/50">
         <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center space-x-4">
+                <!-- Logo path updated to match folder structure -->
                 <img src="./img/uninassau.png" alt="Logo UNINASSAU" class="h-10 w-auto object-contain"
                     onerror="this.style.display='none'">
 
                 <div class="flex flex-col border-l border-gray-200 pl-4">
-                    <span class="font-bold text-sm tracking-widest uppercase leading-none">Semana Ubíqua</span>
+                    <span class="font-bold text-sm tracking-widest uppercase leading-none text-[#1a2a44]">Semana
+                        Ubíqua</span>
                     <span class="text-[#c5a059] text-[10px] font-bold uppercase tracking-[0.2em]">Direito 2026</span>
                 </div>
             </div>
@@ -206,7 +210,8 @@
                                 class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-[#1a2a44] mr-4">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
                             </div>
                             <span class="text-gray-700 font-medium">Regime de bens e patrimônio compartilhado.</span>
                         </div>
@@ -280,7 +285,7 @@
                     </div>
                 </div>
 
-                <!-- Celular com Vídeo (Direita) -->
+                <!-- Celular com Vídeo (Direita) - CORREÇÃO DO VÍDEO -->
                 <div class="order-1 md:order-2 flex justify-center">
                     <div class="phone-frame">
                         <div class="phone-speaker"></div>
@@ -297,8 +302,8 @@
                                 "img"</p>
                         </div>
 
-                        <video id="mainVideo" controls preload="metadata" playsinline
-                            poster="https://via.placeholder.com/400x711/1a2a44/c5a059?text=Carregando+Vídeo...">
+                        <!-- Video Player -->
+                        <video id="mainVideo" controls preload="auto" playsinline>
                             <source src="./img/brenda.mp4" type="video/mp4">
                             Seu navegador não suporta vídeos HTML5.
                         </video>
@@ -333,14 +338,16 @@
                             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-                                    stroke-width="1.5" /></svg>
+                                    stroke-width="1.5" />
+                            </svg>
                         </div>
                         <h3 class="font-bold text-[10px] uppercase tracking-widest text-gray-400">Pública</h3>
                     </div>
                     <div class="bg-gray-50 p-6 rounded-2xl text-center border border-gray-100 card-hover">
                         <div class="text-[#c5a059] mb-3 flex justify-center">
                             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-width="1.5" /></svg>
+                                <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-width="1.5" />
+                            </svg>
                         </div>
                         <h3 class="font-bold text-[10px] uppercase tracking-widest text-gray-400">Contínua</h3>
                     </div>
@@ -349,7 +356,8 @@
                             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-                                    stroke-width="1.5" /></svg>
+                                    stroke-width="1.5" />
+                            </svg>
                         </div>
                         <h3 class="font-bold text-[10px] uppercase tracking-widest text-gray-400">Duradoura</h3>
                     </div>
@@ -358,7 +366,8 @@
                             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                                    stroke-width="1.5" /></svg>
+                                    stroke-width="1.5" />
+                            </svg>
                         </div>
                         <h3 class="font-bold text-[10px] uppercase tracking-widest text-gray-400">Constituir Família
                         </h3>
@@ -386,7 +395,8 @@
                         <div class="bg-[#c5a059] text-white p-2 rounded-lg mr-4">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7" /></svg>
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
                         </div>
                         <h3 class="text-2xl font-bold">Ratificar</h3>
                     </div>
@@ -455,27 +465,28 @@
     <a href="#topo" id="backToTop"
         class="fixed bottom-8 right-8 bg-[#1a2a44] text-white w-12 h-12 rounded-full flex items-center justify-center shadow-2xl hover:bg-[#c5a059] transition-all z-[100]">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" /></svg>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
     </a>
 
     <script>
         const video = document.getElementById('mainVideo');
         const overlay = document.getElementById('videoErrorOverlay');
 
-        // Detalhes extras para depuração
-        video.addEventListener('error', function (e) {
-            console.error('Falha no vídeo:', video.error);
+        // Detecção de erro aprimorada
+        video.addEventListener('error', function () {
+            console.error('Falha ao carregar o vídeo:', video.error);
             overlay.style.display = 'flex';
         });
 
-        // Tentar recarregar se necessário
+        // Verificação adicional no carregamento
         window.addEventListener('load', () => {
             if (video.networkState === video.NETWORK_NO_SOURCE) {
                 overlay.style.display = 'flex';
             }
         });
 
-        // Mostrar/Esconder botão de voltar ao topo
+        // Controle do botão Voltar ao Topo
         window.onscroll = function () {
             const btn = document.getElementById('backToTop');
             if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
@@ -485,7 +496,7 @@
             }
         };
 
-        // Smooth scroll
+        // Smooth scroll aprimorado
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
