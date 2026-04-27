@@ -117,13 +117,14 @@
     <!-- Header -->
     <header class="glass shadow-sm sticky top-0 z-50 border-b border-gray-200/50">
         <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center space-x-3">
-                <div class="w-9 h-9 bg-[#1a2a44] rounded-lg flex items-center justify-center shadow-md">
-                    <span class="text-white font-bold text-xl">U</span>
-                </div>
-                <div class="flex flex-col">
+            <div class="flex items-center space-x-4">
+                <!-- Logo da Faculdade -->
+                <img src="img/uninassau.png" alt="Logo UNINASSAU" class="h-10 w-auto object-contain"
+                    onerror="this.style.display='none'">
+
+                <div class="flex flex-col border-l border-gray-200 pl-4">
                     <span class="font-bold text-sm tracking-widest uppercase leading-none">Semana Ubíqua</span>
-                    <span class="text-[#c5a059] text-[10px] font-bold uppercase tracking-[0.2em]">UNINASSAU 2026</span>
+                    <span class="text-[#c5a059] text-[10px] font-bold uppercase tracking-[0.2em]">Direito 2026</span>
                 </div>
             </div>
             <nav class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest">
@@ -167,7 +168,7 @@
 
     <main class="max-w-6xl mx-auto px-4 py-20 space-y-40">
 
-        <!-- Seção de Apresentação (Lado a Lado) -->
+        <!-- Seção de Apresentação -->
         <section id="apresentacao" class="scroll-mt-24">
             <div class="grid md:grid-cols-2 gap-16 items-center">
 
@@ -203,32 +204,67 @@
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-                                    </svg>
+                                </svg>
                             </div>
                             <span class="text-gray-700 font-medium">Retificação vs. Ratificação de atos.</span>
                         </div>
                     </div>
 
-                    <!-- Integrantes -->
-                    <div class="pt-8 border-t border-gray-200">
-                        <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-3">Integrantes do
-                            Grupo</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span
-                                class="px-3 py-1 bg-gray-100 text-gray-600 rounded-md text-xs font-medium border border-gray-200">Antonia
-                                Rodrigues</span>
-                            <span
-                                class="px-3 py-1 bg-gray-100 text-gray-600 rounded-md text-xs font-medium border border-gray-200">Brenda
-                                Melo</span>
-                            <span
-                                class="px-3 py-1 bg-gray-100 text-gray-600 rounded-md text-xs font-medium border border-gray-200">Celso
-                                Nunes</span>
-                            <span
-                                class="px-3 py-1 bg-gray-100 text-gray-600 rounded-md text-xs font-medium border border-gray-200">Maria
-                                Emanuelly</span>
-                            <span
-                                class="px-3 py-1 bg-gray-100 text-gray-600 rounded-md text-xs font-medium border border-gray-200">Ozailde
-                                Leal</span>
+                    <!-- Equipe do Projeto -->
+                    <div class="pt-8 border-t border-gray-200 space-y-6">
+                        <!-- Integrantes -->
+                        <div>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-3">Integrantes do
+                                Grupo:</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="px-3 py-1 bg-gray-100 text-gray-600 rounded-md text-xs font-medium border border-gray-200">Antônia
+                                    Rodrigues</span>
+                                <span
+                                    class="px-3 py-1 bg-gray-100 text-gray-600 rounded-md text-xs font-medium border border-gray-200">Brenda
+                                    Melo</span>
+                                <span
+                                    class="px-3 py-1 bg-gray-100 text-gray-600 rounded-md text-xs font-medium border border-gray-200">Celso
+                                    Nunes</span>
+                                <span
+                                    class="px-3 py-1 bg-gray-100 text-gray-600 rounded-md text-xs font-medium border border-gray-200">Clara
+                                    Victória</span>
+                                <span
+                                    class="px-3 py-1 bg-gray-100 text-gray-600 rounded-md text-xs font-medium border border-gray-200">Geraldo
+                                    Amancio</span>
+                                <span
+                                    class="px-3 py-1 bg-gray-100 text-gray-600 rounded-md text-xs font-medium border border-gray-200">Maria
+                                    Clara</span>
+                                <span
+                                    class="px-3 py-1 bg-gray-100 text-gray-600 rounded-md text-xs font-medium border border-gray-200">Maria
+                                    Emanuelly</span>
+                                <span
+                                    class="px-3 py-1 bg-gray-100 text-gray-600 rounded-md text-xs font-medium border border-gray-200">Messias
+                                    Santos</span>
+                                <span
+                                    class="px-3 py-1 bg-gray-100 text-gray-600 rounded-md text-xs font-medium border border-gray-200">Ozailde
+                                    Leal</span>
+                                <span
+                                    class="px-3 py-1 bg-gray-100 text-gray-600 rounded-md text-xs font-medium border border-gray-200">Rodrigo
+                                    Soares</span>
+                            </div>
+                        </div>
+
+                        <!-- Orientadores -->
+                        <div>
+                            <p class="text-[10px] font-bold text-[#c5a059] uppercase tracking-widest mb-3">Orientadores:
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="px-3 py-1 bg-blue-50 text-[#1a2a44] rounded-md text-xs font-semibold border border-blue-100">Profº.
+                                    Me. Carlos Amorim</span>
+                                <span
+                                    class="px-3 py-1 bg-blue-50 text-[#1a2a44] rounded-md text-xs font-semibold border border-blue-100">Profª.
+                                    Dra. Eliana Freire</span>
+                                <span
+                                    class="px-3 py-1 bg-blue-50 text-[#1a2a44] rounded-md text-xs font-semibold border border-blue-100">Profª.
+                                    Fabíola Albuquerque</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -342,7 +378,7 @@
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-                                </svg>
+                            </svg>
                         </div>
                         <h3 class="text-2xl font-bold">Retificar</h3>
                     </div>
@@ -368,11 +404,11 @@
     <footer class="bg-white py-16 px-4 border-t border-gray-200">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-10 md:space-y-0">
             <div class="text-center md:text-left space-y-4">
-                <div class="flex items-center justify-center md:justify-start space-x-2">
-                    <div class="w-6 h-6 bg-[#1a2a44] rounded flex items-center justify-center">
-                        <span class="text-white font-bold text-xs">U</span>
-                    </div>
-                    <span class="font-bold text-xs uppercase tracking-widest">Semana Ubíqua 2026</span>
+                <div class="flex items-center justify-center md:justify-start space-x-3">
+                    <img src="img/uninassau.png" alt="Logo UNINASSAU" class="h-8 w-auto object-contain opacity-80"
+                        onerror="this.style.display='none'">
+                    <div class="h-8 w-[1px] bg-gray-200 mx-1"></div>
+                    <span class="font-bold text-xs uppercase tracking-widest text-gray-500">Semana Ubíqua 2026</span>
                 </div>
                 <h3 class="serif-title text-xl text-[#1a2a44]">Direito UNINASSAU</h3>
                 <p class="text-gray-400 text-xs max-w-xs leading-relaxed font-light">
@@ -382,7 +418,8 @@
 
             <div class="flex flex-col items-center md:items-end space-y-2">
                 <p class="text-[10px] font-bold text-[#c5a059] uppercase tracking-[0.4em] mb-2">Copyright</p>
-                <p class="text-gray-500 text-[11px]">&copy; 2026 Alunos 1º Período Direito— Todos os direitos reservados.</p>
+                <p class="text-gray-500 text-[11px]">&copy; 2026 Alunos 1º Período Direito — Todos os direitos
+                    reservados.</p>
                 <p class="text-gray-400 text-[10px] font-light">Projeto Experimental de Direito Civil</p>
             </div>
         </div>
@@ -406,7 +443,7 @@
             }
         };
 
-        // Smooth scroll aprimorado
+        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
